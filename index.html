@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf4">
+  <meta name="description" content="Tudo o que seu pet precisa, com carinho. Encontre brinquedos, acessórios e cuidados para cães e gatos.">
+  <title>Pet&Co. — carinho em cada detalhe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">🐾 Frete grátis nas compras acima de R$ 149</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Pet e Co início"><span class="brand-mark">🐾</span> pet<span>&co.</span></a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#categorias">Categorias</a><a href="#mais-vendidos">Mais vendidos</a><a href="#sobre">Nossa história</a>
+    </nav>
+    <button class="cart-button" id="open-cart" aria-label="Abrir carrinho">🛍️ <span>Carrinho</span><b id="cart-count">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">FEITO PARA QUEM AMA PETS</span>
+        <h1>Amor de verdade<br>vem com <em>patinhas.</em></h1>
+        <p>Produtos escolhidos com carinho para deixar a vida do seu melhor amigo ainda mais feliz.</p>
+        <a class="button button-dark" href="#mais-vendidos">Encontrar favoritos <span>→</span></a>
+        <div class="hero-note"><span>♡</span> Cuidado, qualidade e muito carinho em cada pedido.</div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image"></div>
+        <div class="floating-tag tag-top">feito com amor <span>♡</span></div>
+        <div class="floating-tag tag-bottom">🐶 + 🐱 = felicidade</div>
+        <span class="sparkle sparkle-one">✳</span><span class="sparkle sparkle-two">✦</span>
+      </div>
+    </section>
+
+    <section class="category-section section-wrap" id="categorias">
+      <div class="section-heading"><div><span class="eyebrow">UM MUNDO DE CUIDADOS</span><h2>O que seu pet precisa?</h2></div><p>Pequenos mimos, grandes momentos.</p></div>
+      <div class="category-grid">
+        <a class="category-card cat-dog" href="#mais-vendidos" data-category="Cães"><span class="category-emoji">🐶</span><strong>Para cães</strong><small>Ver produtos →</small></a>
+        <a class="category-card cat-cat" href="#mais-vendidos" data-category="Gatos"><span class="category-emoji">🐱</span><strong>Para gatos</strong><small>Ver produtos →</small></a>
+        <a class="category-card cat-toy" href="#mais-vendidos" data-category="Brinquedos"><span class="category-emoji">🎾</span><strong>Brinquedos</strong><small>Ver produtos →</small></a>
+        <a class="category-card cat-care" href="#mais-vendidos" data-category="Cuidados"><span class="category-emoji">🧼</span><strong>Cuidados</strong><small>Ver produtos →</small></a>
+      </div>
+    </section>
+
+    <section class="products-section" id="mais-vendidos">
+      <div class="section-wrap">
+        <div class="section-heading"><div><span class="eyebrow">OS QUERIDINHOS DA CASA</span><h2>Favoritos dos pets <span>♡</span></h2></div><a class="text-link" href="#mais-vendidos" id="show-all">Ver todos os produtos →</a></div>
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <section class="promise-section section-wrap" id="sobre">
+      <div class="promise-illustration">🐕<span>♡</span></div>
+      <div><span class="eyebrow">MAIS QUE UMA LOJA</span><h2>Seu pet merece<br>o melhor carinho.</h2><p>Acreditamos que eles não são só animais de estimação. São família. Por isso, reunimos produtos que tornam cada passeio, brincadeira e cochilo ainda mais especial.</p><a href="#mais-vendidos" class="text-link">Escolher um mimo →</a></div>
+      <div class="promise-points"><div>🚚 <span><b>Entrega cuidadosa</b><small>Seu pedido chega com carinho.</small></span></div><div>💛 <span><b>Seleção especial</b><small>Produtos escolhidos a dedo.</small></span></div><div>🐾 <span><b>Amor em cada detalhe</b><small>Porque eles merecem.</small></span></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#"><span class="brand-mark">🐾</span> pet<span>&co.</span></a><p>Feito com amor para quem tem patas. ♡</p><small>© <span id="year"></span> Pet&Co. Todos os direitos reservados.</small></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="drawer-heading"><div><span class="eyebrow">SUA SACOLINHA</span><h2>Meu carrinho</h2></div><button id="close-cart" class="icon-button" aria-label="Fechar carrinho">✕</button></div>
+    <div class="cart-items" id="cart-items"><p class="empty-cart">Seu carrinho está vazio. Que tal escolher um mimo? 🐾</p></div>
+    <div class="cart-bottom"><div class="subtotal"><span>Subtotal</span><strong id="cart-total">R$ 0,00</strong></div><p class="shipping-note">Frete calculado no atendimento.</p><button class="button button-dark checkout-button" id="checkout">Finalizar pedido pelo WhatsApp →</button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
